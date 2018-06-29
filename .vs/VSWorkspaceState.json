@@ -3,11 +3,12 @@
     "",
     "\\ChallengeModule",
     "\\client",
+    "\\client\\partials",
     "\\public",
+    "\\server",
     "\\views",
-    "\\views\\pages",
-    "\\views\\partials"
+    "\\views\\pages"
   ],
-  "SelectedNode": "\\views\\pages\\db.ejs",
+  "SelectedNode": "\\webpack.config.js",
   "PreviewInSolutionExplorer": false
 }
