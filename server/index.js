@@ -6,12 +6,12 @@ var chall = require('../ChallengeModule/challenge_module')
 
 CountPresses = () => {
 
-    NumPresses = 0;
-    NumDataPresses = 0;
+    let NumPresses = 0;
+    let NumDataPresses = 0;
     //counter function
     onPress = (data) => {
 
-        this.NumPresses++;
+        NumPresses++;
         this.NumDataPresses += data;
 
     }
@@ -37,8 +37,8 @@ CountPresses = () => {
     setInterval(() => io.emit('time', new Date().toTimeString()), 1000);
 
     //button presses
-    setInterval(() => io.emit('presses', '100'/*this.  NumPresses*/), 1000);
-
+    setInterval(() => io.emit('presses', NumPresses /*this.NumPresses*/), 1000);
+    
 } 
 
 CountPresses();
