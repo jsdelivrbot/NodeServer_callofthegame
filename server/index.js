@@ -29,7 +29,7 @@ CountPresses = () => {
     //log connection and disconnection
     io.on('connection', (socket) => {
         console.log('Client connected');
-        socket.on('press', onPress( 1 ) );
+        socket.on('press', onPress );
         socket.on('disconnect', () => console.log('Client disconnected'));
     });
 
@@ -37,7 +37,7 @@ CountPresses = () => {
     setInterval(() => io.emit('time', new Date().toTimeString()), 1000);
 
     //button presses
-    setInterval(() => io.emit('presses', this.NumPresses), 1000);
+    setInterval(() => io.emit('presses', '100'/*this.NumPresses*/), 1000);
 
 } 
 
