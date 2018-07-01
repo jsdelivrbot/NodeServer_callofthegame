@@ -29,7 +29,7 @@ CountPresses = () => {
     //log connection and disconnection
     io.on('connection', (socket) => {
         console.log('Client connected');
-        socket.on('press', onPress( 1 ) );
+        socket.on('press', onPress );
         socket.on('disconnect', () => console.log('Client disconnected'));
     });
 
